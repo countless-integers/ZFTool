@@ -106,6 +106,12 @@ class Module implements ConsoleUsageProviderInterface, AutoloaderProviderInterfa
             'install zf <path> [<version>]' => '',
             array('<path>', 'The directory where to install the ZF2 library'),
             array('<version>', 'The version to install, if not specified uses the last available'),
+
+            'Test case generator:',
+            'test [--test-root-dir=<path>] <fileOrClass>' => '',
+            array('<fileOrClass>>', 'Either vaild filepathname or fully qualified classname used in the application'),
+            array('--test-root-dir', 'Root directory for test suites. E.g. test --test-root-dir=test module/App/src/App/Constroller/IndexController.php. ' .
+                                     'Defaults to: "./module"'),
         );
     }
 }

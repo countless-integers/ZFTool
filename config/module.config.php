@@ -15,6 +15,7 @@ return array(
             'ZFTool\Controller\Create'      => 'ZFTool\Controller\CreateController',
             'ZFTool\Controller\Install'     => 'ZFTool\Controller\InstallController',
             'ZFTool\Controller\Diagnostics' => 'ZFTool\Controller\DiagnosticsController',
+            'ZFTool\Controller\TestGenerator' => 'ZFTool\Controller\TestGeneratorController',
         ),
     ),
 
@@ -132,6 +133,15 @@ return array(
                         'defaults' => array(
                             'controller' => 'ZFTool\Controller\Diagnostics',
                             'action'     => 'run',
+                        ),
+                    ),
+                ),
+                'zftool-generate-test-from-file-or-class' => array(
+                    'options' => array(
+                        'route'    => 'test [--test-root-dir=] <fileOrClass>',
+                        'defaults' => array(
+                            'controller' => 'ZFTool\Controller\TestGenerator',
+                            'action'     => 'generate',
                         ),
                     ),
                 ),

@@ -47,7 +47,7 @@ class ModuleController extends AbstractActionController
             );
         }
         $modules = array_keys($mm->getLoadedModules(false));
-       
+
         return $modules;
     }
 }
